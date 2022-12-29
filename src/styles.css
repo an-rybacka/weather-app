@@ -1,0 +1,71 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/648/original/playa-las-canas-von-westen.jpeg?1669684919");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: "Quicksand", sans-serif;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.app-container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4em;
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  min-width: 500px;
+  max-width: 600px;
+}
+form {
+  margin: 20px;
+  display: block;
+}
+input {
+  width: 80%;
+  border-radius: 5px;
+  border-width: 1px;
+}
+.current-location {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#wind {
+  text-transform: lowercase;
+}
+
+.day-card {
+  text-align: center;
+  margin: 10px;
+  min-width: 80px;
+  max-width: 120px;
+}
+.card-body {
+  flex: 1 1 auto;
+}
+.today-temp {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 300;
+}
+.temperature {
+  font-size: 45px;
+}
+.units {
+  position: relative;
+  top: -20px;
+  font-size: 18px;
+  text-decoration: none;
+}
