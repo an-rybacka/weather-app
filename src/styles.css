@@ -24,6 +24,7 @@ h2 {
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
+  padding-bottom: 10px;
   min-width: 500px;
   max-width: 600px;
 }
@@ -69,3 +70,20 @@ input {
   font-size: 18px;
   text-decoration: none;
 }
+.hosting {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+margin-top: 10px;
+margin-bottom: 0px;
+}
+
+#github
+{
+  text-decoration: none;
+  font-weight: bold;
+  color: blueviolet;
+}
+#github:hover {
+  text-decoration: underline
+}
+
