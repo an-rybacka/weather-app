@@ -21,7 +21,8 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day}, ${hour}:${minutes}`;
+  return `Last update:
+   ${day}, ${hour}:${minutes}`;
 }
 
 let dateElement = document.querySelector("#currentTime");
