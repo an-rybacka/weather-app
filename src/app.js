@@ -48,6 +48,13 @@ function showWeather(response) {
   let todayWind = Math.round(response.data.wind.speed);
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${todayWind} km/h`;
+
+  let iconElement = document.querySelector("#icon-today");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCity(event) {
