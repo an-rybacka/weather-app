@@ -67,8 +67,23 @@ input {
   position: relative;
   top: -20px;
   font-size: 18px;
+}
+#celsius-link {
   text-decoration: none;
 }
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  cursor: default
+}
+.active:hover {
+  text-decoration: none;
+  color: black
+}
+
 .hosting {
   font-size: smaller;
   font-family: "Courier New", Courier, monospace;

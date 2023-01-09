@@ -34,13 +34,12 @@ dateElement.innerHTML = formatDate(currentDate);
 function showWeather(response) {
   document.querySelector("#h1city").innerHTML = response.data.name;
 
-  let todayTemp = Math.round(response.data.main.temp);
-  let temp = document.querySelector("#temperature");
-  temp.innerHTML = `${todayTemp}`;
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusTemp = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 
-  let todaySky = response.data.weather[0].description;
-  let clouds = document.querySelector("#clouds");
-  clouds.innerHTML = `${todaySky}`;
+  let description = document.querySelector("#clouds");
+  description.innerHTML = response.data.weather[0].description;
 
   let todayPrecipitation = response.data.main.humidity;
   let precipitation = document.querySelector("#precipitation");
@@ -83,7 +82,33 @@ function getCurrentLocation(event) {
 
 let searchButton = document.querySelector("#search-button");
 searchButton.addEventListener("click", showCity);
-search("Zurich");
 
 let LocationButton = document.querySelector("#button-location");
 LocationButton.addEventListener("click", getCurrentLocation);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+search("Zurich");
