@@ -29,6 +29,43 @@ let dateElement = document.querySelector("#currentTime");
 let currentDate = new Date();
 dateElement.innerHTML = formatDate(currentDate);
 
+// FUNCTION Display forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", ];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="day-card card col">
+            <div class="card-body">
+              <p class="day">${day}</p>
+              <br />
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+                class="icon-forecast"
+                width="42"
+              />
+              <br />
+              <p class="temp">
+                <span class="max-temp">5°C </span
+                ><span class="min-temp"> | 5°C </span>
+              </p>
+              <br />
+            </div>
+          </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 // FUNCTION Display searched weather
 
 function showWeather(response) {
@@ -117,5 +154,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+displayForecast();
 
 search("Zurich");

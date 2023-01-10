@@ -70,7 +70,7 @@ input {
 .temperature {
   font-size: 45px;
   position: relative;
-  bottom: 20px
+  bottom: 20px;
 }
 .units {
   position: relative;
@@ -86,11 +86,11 @@ input {
 
 .active {
   color: black;
-  cursor: default
+  cursor: default;
 }
 .active:hover {
   text-decoration: none;
-  color: black
+  color: black;
 }
 
 .hosting {
@@ -122,4 +122,8 @@ input {
 #icon-today {
   display: block;
   margin: 0 auto;
+}
+.icon-forecast {
+  position: relative;
+  top: -10px;
 }
