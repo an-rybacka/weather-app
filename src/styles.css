@@ -22,9 +22,11 @@ h2 {
   border-radius: 5px;
   backdrop-filter: blur(2px);
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
-  padding-bottom: 10px;
+  padding: 30px 30px 10px 30px;
   max-width: 600px;
+}
+.city-card {
+  padding: 10px 10px 0px 30px;
 }
 form {
   margin: 20px;
@@ -48,12 +50,17 @@ input {
 .day-card {
   text-align: center;
   margin: 10px;
-  padding-bottom: 0px;
+  padding: 0px;
   min-width: 80px;
   max-width: 120px;
 }
 .card-body {
   flex: 1 1 auto;
+  padding: 10px 10px 0px 10px;
+}
+.min-temp {
+  opacity: 60%;
+  font-size: 12px;
 }
 .today-temp {
   text-align: center;
