@@ -113,6 +113,10 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+
+  let currentDate = new Date();
+  dateElement.innerHTML = formatDate(currentDate);
+
   getForecast(response.data.coord);
 }
 
